@@ -6,22 +6,17 @@ objects in a special manner.
 With such visualizer reading of the debugging JSON values became
 much easier, because of compact data representation.
 
-![Example view on jsoncpp test JSON file](https://raw.githubusercontent.com/dmirys/jsoncpp.natvis/master/img/jsoncpp.natvis.png)
-
 Supported Versions
 ------------------
-I've tested it with jsoncpp 0.6.0-rc2 on Visual Studio 2015 SP3
+I've tested it with jsoncpp 1.8.0 on Visual Studio 2017
 and currently have no information could it be run on other versions.
 
 How to install
 --------------
 There are several ways to deploy natvis file. The easiest one
-is to copy jsoncpp.natvis to the %USERPROFILE%\My Documents\Visual Studio 2015\Visualizers.
+is to copy jsoncpp.natvis to the %USERPROFILE%\My Documents\Visual Studio 2017\Visualizers.
 You have to create Visualizaers folder if it does not exist.
-
-Other methods are described in the following article:
-https://msdn.microsoft.com/en-us/library/jj620914.aspx#Anchor_3
 
 More information about creation of custom views
 -----------------------------------------------
-https://msdn.microsoft.com/en-us/library/jj620914.aspx
+https://docs.microsoft.com/en-us/visualstudio/debugger/create-custom-views-of-native-objects?view=vs-2019
