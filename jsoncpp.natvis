@@ -8,7 +8,7 @@
 				<HeadPointer>_Mypair._Myval2._Myval2._Myhead-&gt;_Parent</HeadPointer>
 				<LeftPointer>_Left</LeftPointer>
 				<RightPointer>_Right</RightPointer>
-				<ValueNode Condition="!((bool)_Isnil)" Name="{_Myval.first.cstr_,s8}" >_Myval,view(jsoncpp)</ValueNode>
+				<ValueNode Condition="!((bool)_Isnil)" Name="{_Myval.first}" >_Myval,view(jsoncpp)</ValueNode>
 			</TreeItems>
 		</Expand>
 	</Type>
@@ -36,6 +36,15 @@
 			<ExpandedItem Condition="type_ == 6" ExcludeView="simple">*(value_.map_),view(jsoncpp)</ExpandedItem>
 			<ExpandedItem Condition="type_ == 7" ExcludeView="simple">*(value_.map_),view(jsoncpp)</ExpandedItem>
 		</Expand>
+	</Type>
+
+	<Type Name="Json::Value::CZString">
+		<DisplayString Condition="cstr_ == 0">[{index_}]</DisplayString>
+		<DisplayString Condition="cstr_ != 0 &amp;&amp; storage_.policy_ != 2">{cstr_,s8}</DisplayString>
+		<DisplayString>{cstr_+4,s8}</DisplayString>
+		<StringView Condition="cstr_ != 0 &amp;&amp; storage_.policy_ != 2">cstr_,s8</StringView>
+		<StringView Condition="cstr_ != 0 &amp;&amp; storage_.policy_ == 2">cstr_+4,s8</StringView>
+
 	</Type>
 
 </AutoVisualizer>
